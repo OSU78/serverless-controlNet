@@ -36,7 +36,6 @@ RUN apt-get install python3-opencv -y
 
 # Install Python dependencies
 RUN python3.8 -m pip install --upgrade pip==20.3
-RUN python3.8 -m pip install basicsr==1.4.2
 RUN python3.8 -m pip install torch==1.13.0
 RUN python3.8 -m pip install torchvision==0.14.0
 RUN python3.8 -m pip install numpy==1.21.6
@@ -62,7 +61,7 @@ RUN python3.8 -m pip install addict==2.4.0
 RUN python3.8 -m pip install yapf==0.32.0
 RUN python3.8 -m pip install prettytable==3.6.0
 RUN python3.8 -m pip install runpod==0.9.1
-
+RUN python3.8 -m pip install basicsr
 # Copy model files
 COPY . /src/
 
