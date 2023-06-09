@@ -66,7 +66,7 @@ RUN python3.8 -m pip install runpod==0.9.1
 # Copy model files
 COPY . /src/
 
-ARG MODEL_TYPE="openpose"
+ARG MODEL_TYPE="canny"
 ENV MODEL_TYPE=${MODEL_TYPE}
 
 RUN python3.8 download_weights.py --model_type="${MODEL_TYPE}"
